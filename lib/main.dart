@@ -14,7 +14,9 @@ class FirstPage extends StatelessWidget {
         appBar: AppBar(
           title: Text('FirstPage'),
         ),
-        body: Column(
+        body: new Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             RaisedButton(
               child: Text('SecondPage'),
@@ -42,7 +44,7 @@ class FirstPage extends StatelessWidget {
                   );
                 }),
           ],
-        ));
+        )));
   }
 }
 
@@ -50,18 +52,21 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("SecondPage"),
-      ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Return'),
+        appBar: AppBar(
+          title: Text("SecondPage"),
         ),
-      ),
-    );
+        body: new Center(
+          child: new Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text('Return'),
+                ),
+              ]),
+        ));
   }
 }
 
@@ -72,15 +77,18 @@ class ThirdPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("ThirdPage"),
       ),
-      body: Center(
-        child: RaisedButton(
+      body: new Center(
+        child: new Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+        RaisedButton(
           onPressed: () {
             Navigator.pop(context);
           },
           child: Text('Return'),
         ),
-      ),
-    );
+      ]),
+    ));
   }
 }
 
@@ -88,17 +96,20 @@ class LastPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("LastPage"),
-      ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Return'),
+        appBar: AppBar(
+          title: Text("LastPage"),
         ),
-      ),
-    );
+        body: new Center(
+          child: new Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text('Return'),
+                ),
+              ]),
+        ));
   }
 }
