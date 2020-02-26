@@ -23,7 +23,7 @@ class FirstPage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SecondPage()),
+                  MaterialPageRoute(builder: (context) => SecondPage("SAYLES RULES")),
                 );
               },
             ),
@@ -32,7 +32,7 @@ class FirstPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ThirdPage()),
+                    MaterialPageRoute(builder: (context) => ThirdPage("SAYLES RULES")),
                   );
                 }),
             RaisedButton(
@@ -40,7 +40,7 @@ class FirstPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => LastPage()),
+                    MaterialPageRoute(builder: (context) => LastPage("SAYLES RULES")),
                   );
                 }),
           ],
@@ -49,6 +49,11 @@ class FirstPage extends StatelessWidget {
 }
 
 class SecondPage extends StatelessWidget {
+
+  final String pageText;
+
+  SecondPage(this.pageText);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,7 +68,7 @@ class SecondPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  child: Text('Return'),
+                  child: Text(pageText),
                 ),
               ]),
         ));
@@ -71,6 +76,11 @@ class SecondPage extends StatelessWidget {
 }
 
 class ThirdPage extends StatelessWidget {
+
+  final String pageText;
+
+  ThirdPage(this.pageText);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -85,7 +95,7 @@ class ThirdPage extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text('Return'),
+          child: Text(pageText),
         ),
       ]),
     ));
@@ -93,6 +103,11 @@ class ThirdPage extends StatelessWidget {
 }
 
 class LastPage extends StatelessWidget {
+
+  final String pageText;
+
+  LastPage(this.pageText);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,7 +122,7 @@ class LastPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  child: Text('Return'),
+                  child: Text(pageText),
                 ),
               ]),
         ));
